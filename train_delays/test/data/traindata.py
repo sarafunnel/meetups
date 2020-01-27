@@ -27,24 +27,6 @@ train_data = {
                         "TimeAtLocation": "2020-01-15T05:50:00.000+01:00",
                     },
                     {
-                        "AdvertisedTimeAtLocation": "2020-01-15T06:40:00.000+01:00",
-                        "AdvertisedTrainIdent": "42400",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T06:34:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T07:55:00.000+01:00",
-                        "AdvertisedTrainIdent": "7103",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T08:00:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T08:28:00.000+01:00",
-                        "AdvertisedTrainIdent": "41919",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T08:32:00.000+01:00",
-                    },
-                    {
                         "AdvertisedTimeAtLocation": "2020-01-15T08:53:00.000+01:00",
                         "AdvertisedTrainIdent": "92",
                         "Canceled": False,
@@ -78,31 +60,7 @@ train_data = {
                         "AdvertisedTimeAtLocation": "2020-01-14T12:58:00.000+01:00",
                         "AdvertisedTrainIdent": "4002",
                         "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T12:39:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T13:26:00.000+01:00",
-                        "AdvertisedTrainIdent": "42504",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T13:35:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T13:47:00.000+01:00",
-                        "AdvertisedTrainIdent": "41902",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T13:48:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T13:59:00.000+01:00",
-                        "AdvertisedTrainIdent": "5904",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T13:56:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T14:19:00.000+01:00",
-                        "AdvertisedTrainIdent": "9106",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T14:38:00.000+01:00",
+                        "TimeAtLocation": "2020-01-14T12:39:00.000+01:00",
                     },
                     {
                         "AdvertisedTimeAtLocation": "2020-01-15T14:48:00.000+01:00",
@@ -111,10 +69,10 @@ train_data = {
                         "TimeAtLocation": "2020-01-15T14:48:00.000+01:00",
                     },
                     {
-                        "AdvertisedTimeAtLocation": "2020-01-15T15:40:00.000+01:00",
+                        "AdvertisedTimeAtLocation": "2020-01-14T15:40:00.000+01:00",
                         "AdvertisedTrainIdent": "7104",
                         "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T15:36:00.000+01:00",
+                        "TimeAtLocation": "2020-01-14T15:36:00.000+01:00",
                     },
                     {
                         "AdvertisedTimeAtLocation": "2020-01-15T16:22:00.000+01:00",
@@ -123,28 +81,16 @@ train_data = {
                         "TimeAtLocation": "2020-01-15T16:05:00.000+01:00",
                     },
                     {
-                        "AdvertisedTimeAtLocation": "2020-01-15T16:49:00.000+01:00",
+                        "AdvertisedTimeAtLocation": "2020-01-12T16:49:00.000+01:00",
                         "AdvertisedTrainIdent": "19274",
                         "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T17:03:00.000+01:00",
+                        "TimeAtLocation": "2020-01-12T17:03:00.000+01:00",
                     },
                     {
                         "AdvertisedTimeAtLocation": "2020-01-15T17:06:00.000+01:00",
                         "AdvertisedTrainIdent": "4375",
                         "Canceled": False,
                         "TimeAtLocation": "2020-01-15T17:02:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T17:32:00.000+01:00",
-                        "AdvertisedTrainIdent": "42200",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T17:24:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-15T18:03:00.000+01:00",
-                        "AdvertisedTrainIdent": "41402",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T16:34:00.000+01:00",
                     },
                     {
                         "AdvertisedTimeAtLocation": "2020-01-15T19:06:00.000+01:00",
@@ -207,30 +153,6 @@ train_data = {
                         "TimeAtLocation": "2020-01-16T00:18:00.000+01:00",
                     },
                     {
-                        "AdvertisedTimeAtLocation": "2020-01-16T00:36:00.000+01:00",
-                        "AdvertisedTrainIdent": "5900",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-16T01:20:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T00:53:00.000+01:00",
-                        "AdvertisedTrainIdent": "21112",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-15T22:24:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T04:10:00.000+01:00",
-                        "AdvertisedTrainIdent": "94",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-16T04:07:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T05:30:00.000+01:00",
-                        "AdvertisedTrainIdent": "19261",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-16T05:21:00.000+01:00",
-                    },
-                    {
                         "AdvertisedTimeAtLocation": "2020-01-16T06:09:00.000+01:00",
                         "AdvertisedTrainIdent": "9102",
                         "Canceled": False,
@@ -289,37 +211,6 @@ train_data = {
                         "AdvertisedTrainIdent": "41914",
                         "Canceled": False,
                         "TimeAtLocation": "2020-01-16T11:58:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T12:58:00.000+01:00",
-                        "AdvertisedTrainIdent": "4002",
-                        "Canceled": False,
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T13:26:00.000+01:00",
-                        "AdvertisedTrainIdent": "42504",
-                        "Canceled": False,
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T13:47:00.000+01:00",
-                        "AdvertisedTrainIdent": "41902",
-                        "Canceled": False,
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T13:59:00.000+01:00",
-                        "AdvertisedTrainIdent": "5904",
-                        "Canceled": False,
-                        "TimeAtLocation": "2020-01-16T13:07:00.000+01:00",
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T16:19:00.000+01:00",
-                        "AdvertisedTrainIdent": "9118",
-                        "Canceled": False,
-                    },
-                    {
-                        "AdvertisedTimeAtLocation": "2020-01-16T17:12:00.000+01:00",
-                        "AdvertisedTrainIdent": "4375",
-                        "Canceled": True
                     },
                     {
                         "AdvertisedTimeAtLocation": "2020-01-16T17:32:00.000+01:00",

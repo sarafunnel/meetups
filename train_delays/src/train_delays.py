@@ -6,7 +6,8 @@ import requests
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from train_delays.src.data_model import TrainAnnouncement
+from data import traindata
+from data_model import TrainAnnouncement
 
 
 def runner():
@@ -15,7 +16,7 @@ def runner():
     delays = list((i.delay_in_mins for i in active_trains))
     adv_time = list((datetime.datetime.fromisoformat(i) for i in adv_time))
     legacy_dataframe = pd.DataFrame({'Date': adv_time, 'Delay': delays}, columns=['Date', 'Delay'])
-    legacy_dataframe.Date = pd.to_datetime(legacy_dataframe.Datum)
+    legacy_dataframe.Date = pd.to_datetime(legacy_dataframe.Date)
     legacy_dataframe.set_index('Date', inplace=True)
 
     # Iterera lists
@@ -93,9 +94,10 @@ def data_gathering():
 
 def business_rules_converter():
     lista = []
-    data = data_gathering()
-    data = data.replace("false", "False")
-    data = literal_eval(data)
+    # data = data_gathering()
+    # data = data.replace("false", "False")
+    data = traindata.train_data
+    # data = literal_eval(data)
     d = data.get("RESPONSE").get("RESULT")[0].values()
     e = list(data.get("RESPONSE").get("RESULT")[0].values())[0]
 
@@ -115,9 +117,10 @@ def business_rules_converter():
     for train_call in active_trains:
         nr = 0
         if train_call.est_time_location != None:
-            nr = ((datetime.datetime.fromisoformat(
-                train_call.adv_time
-            ) - datetime.datetime.fromisoformat(train_call.est_time_location)).seconds)
+            start = datetime.datetime.fromisoformat(train_call.est_time_location)
+            end = datetime.datetime.fromisoformat(train_call.adv_time)
+            if start < end:
+                nr = (end - start).seconds
         train_call.add_delay(nr / 60)
     return active_trains, canceled_trains
 
@@ -132,3 +135,6 @@ def clean_data(i):
         )
         return trains_call
     return None
+
+
+runner()
