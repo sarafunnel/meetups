@@ -1,6 +1,6 @@
-from train_delays.src.data_model import TrainAnnouncement
-from train_delays.src.train_delays import business_rules_converter, clean_data
-from train_delays.test.data import traindata
+from src.data_model import TrainAnnouncement
+from src.train_delays import business_rules_converter, clean_data
+from test.data import traindata
 
 
 def substitute_call():

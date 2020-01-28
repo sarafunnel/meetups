@@ -1,3 +1,4 @@
+import collections
 import datetime
 import json
 from ast import literal_eval
@@ -6,8 +7,8 @@ import requests
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from data import traindata
-from data_model import TrainAnnouncement
+from src.data_model import TrainAnnouncement
+from test.data import traindata
 
 
 def runner():
@@ -36,11 +37,12 @@ def runner():
         values = avg_delays[key]
         timestamp_string = key.strftime("%Y-%m-%d   ")
         v[timestamp_string] = sum(values['vals']) / len(values['vals'])
-
     legacy_dataframe.sort_index()
-
-    data = {'minutes': list(v.values()),
-            'datum': list(v.keys())}
+    ordered_dict = collections.OrderedDict(sorted(v.items()))
+    for key in ordered_dict.keys():
+        print(key, " :: ", v[key])
+    data = {'minutes': list(ordered_dict.values()),
+            'datum': list(ordered_dict.keys())}
     df = pd.DataFrame(data)
 
     df.plot(kind='bar', x='datum', y='minutes')
@@ -136,5 +138,3 @@ def clean_data(i):
         return trains_call
     return None
 
-
-runner()
