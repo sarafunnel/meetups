@@ -19,8 +19,8 @@ def runner():
     legacy_dataframe = pd.DataFrame({'Date': adv_time, 'Delay': delays}, columns=['Date', 'Delay'])
     legacy_dataframe.Date = pd.to_datetime(legacy_dataframe.Date)
     legacy_dataframe.set_index('Date', inplace=True)
-
-    # Iterera lists
+    legacy_dataframe.sort_index()
+    # Iterate lists
     i = 0
     avg_delays = {}
     for xx in adv_time:
@@ -37,10 +37,8 @@ def runner():
         values = avg_delays[key]
         timestamp_string = key.strftime("%Y-%m-%d   ")
         v[timestamp_string] = sum(values['vals']) / len(values['vals'])
-    legacy_dataframe.sort_index()
+
     ordered_dict = collections.OrderedDict(sorted(v.items()))
-    for key in ordered_dict.keys():
-        print(key, " :: ", v[key])
     data = {'minutes': list(ordered_dict.values()),
             'datum': list(ordered_dict.keys())}
     df = pd.DataFrame(data)
@@ -53,7 +51,7 @@ def runner():
     plt.show()'''
 
     plt.xlabel("Time")
-    plt.ylabel("Avg deelay in mins")
+    plt.ylabel("Avg delay in mins")
     plt.title("Avg rain delays in minutes at Stockholm Central")
     plt.show()
 
@@ -96,23 +94,22 @@ def data_gathering():
 
 def business_rules_converter():
     lista = []
-    # data = data_gathering()
-    # data = data.replace("false", "False")
-    data = traindata.train_data
-    # data = literal_eval(data)
-    d = data.get("RESPONSE").get("RESULT")[0].values()
-    e = list(data.get("RESPONSE").get("RESULT")[0].values())[0]
+    data = data_gathering()
+    data = data.replace("false", "False")
+    # data = traindata.train_data
+    data = literal_eval(data)
+    lines = list(data.get("RESPONSE").get("RESULT")[0].values())[0]
 
     canceled_trains = []
     n = 0
-    for i in e:
+    for i in lines:
         if i.get("Canceled") != False:
             canceled_trains.append(i)
-            e.pop(n)
+            lines.pop(n)
             n = n + 1
 
     active_trains = []
-    for i in e:
+    for i in lines:
         if clean_data(i):
             active_trains.append(clean_data(i))
 
