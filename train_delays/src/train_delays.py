@@ -42,14 +42,12 @@ def runner():
     data = {'minutes': list(ordered_dict.values()),
             'datum': list(ordered_dict.keys())}
     df = pd.DataFrame(data)
-
-    df.plot(kind='bar', x='datum', y='minutes')
+    plt.bar(df['datum'], df['minutes'])
     '''df1 = df1.groupby([df1['Datum'].dt.date])['Delay'].mean()
     print(df1)
     plt.figure()
     df1.plot.hist(alpha=0.5)
     plt.show()'''
-
     plt.xlabel("Time")
     plt.ylabel("Avg delay in mins")
     plt.title("Avg rain delays in minutes at Stockholm Central")
